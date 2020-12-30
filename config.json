@@ -3,6 +3,9 @@
 	"TOKEN":  "Nzg1ODExNTMxNjY4NzgzMTI0.X89SBA.c7AjtVfJSdSD5iRuFB8s5_QXsbk",
   "music": true,
   "moderation": true,
-  "Antiraid": true,
-  "EmojisForPoorUsers": true
+  "AntirRaid": true,
+  "EmojisForPoorUsers": true,
+  "Welcomer": true,
+  "welcomeChannel": "785818313480732712",
+  "new_account_days": 10
 }
