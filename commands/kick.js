@@ -15,7 +15,7 @@ module.exports = {
       return
     }
 
-    var reason = msg.content.split(' ').slice(2).join(' ');
+    let reason = msg.content.split(' ').slice(2).join(' ');
     mentionMember.send('You got kicked for ' + reason);
     msg.channel.send("<@" + mentionMember + ">" + ' got kicked').catch(err => console.error(err));
     setTimeout(() => { mentionMember.kick(); }, 200);

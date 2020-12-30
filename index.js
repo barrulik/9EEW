@@ -39,7 +39,7 @@ client.on("message", async (msg) => {
   if (msg.author.bot) return;
 
   const arg = msg.content.substring(config.PREFIX.length).split(" ");
-  const args = msg.content.slice(client.PREFIX.length).trim().split(/ +/);
+  const args = msg.content.slice(config.PREFIX.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
 
   const command = client.commands.get(commandName);
