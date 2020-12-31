@@ -7,8 +7,7 @@ module.exports = {
       msg.channel.send('```please mention the user you want to kick```');
       return;
     }
-
-    if (mentionMember.roles.highest>= msg.member.roles.highest) {
+    if (mentionMember.roles.highest.position>= msg.member.roles.highest.position) {
       msg.channel.send("```you can't warn someone that is higher then you in the hierarchy```");
       return;
     }
