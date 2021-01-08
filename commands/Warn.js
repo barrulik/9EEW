@@ -13,7 +13,7 @@ module.exports = {
     }
 
     let reason = msg.content.split(' ').slice(2).join(' ');
-    mentionMember.send('You got warned for ' + reason);
+    mentionMember.send('You got warned for ' + reason + " in " + msg.guild.name);
     msg.channel.send("<@" + mentionMember + ">" + ' got warned for ' + reason);
   }
 };

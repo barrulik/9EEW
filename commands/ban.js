@@ -16,7 +16,7 @@ module.exports = {
     }
 
     let reason = msg.content.split(' ').slice(2).join(' ');
-    mentionMember.send('you got banned for ' + reason);
+    mentionMember.send('you got banned for ' + reason + " in " + msg.guild.name);
     msg.channel.send("<@" + mentionMember + ">" + 'got banned');
     setTimeout(() => { mentionMember.ban(); }, 200);
   }

@@ -12,7 +12,8 @@ module.exports = {
         return;
       }
       msg.channel.bulkDelete(parseInt(args[1])+1)
-      .catch(error => console.error(error)).then(msg.channel.send("seccessfully deleted " + args[1] + " messages"));
+        .catch(error => console.error(error))
+          .then(msg.channel.send("seccessfully deleted " + args[1] + " messages"));
     }
   }
 };

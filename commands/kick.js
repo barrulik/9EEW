@@ -16,9 +16,8 @@ module.exports = {
     }
 
     let reason = msg.content.split(' ').slice(2).join(' ');
-    mentionMember.send('You got kicked for ' + reason);
+    mentionMember.send('You got kicked for ' + reason + " in " + msg.guild.name);
     msg.channel.send("<@" + mentionMember + ">" + ' got kicked').catch(err => console.error(err));
     setTimeout(() => { mentionMember.kick(); }, 200);
-    msg.channel.send("something went wronge");
   }
 };

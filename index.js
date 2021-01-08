@@ -87,9 +87,6 @@ client.on("message", async (msg) => {
     msg.channel.send("something went wrong").catch(console.error);
   }
 
-
-
-
 });
 
 
