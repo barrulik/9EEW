@@ -1,6 +1,6 @@
 module.exports = {
   name: "ban",
-  execute(msg) {
+  execute(msg, args) {
     if (!msg.member.hasPermission('BAN_MEMBERS')) {
       msg.channel.send('```you have no permissions to ban members```');
       return;

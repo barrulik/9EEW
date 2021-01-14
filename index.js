@@ -54,7 +54,6 @@ client.on("message", async (msg) => {
     }
   }
   if (had_emoji){
-
     msg.channel.send(msg.author.username + "#" + msg.author.discriminator + " - \n" + emoji_output);
     msg.delete();
   }
@@ -71,7 +70,7 @@ client.on("message", async (msg) => {
     }
   }
 
-  const arg = msg.content.substring(config.PREFIX.length).split(" ");
+  const arg = msg.content.slice(config.PREFIX.length).trim().split(" ");
   const args = msg.content.slice(config.PREFIX.length).trim().split(/ +/);
   const commandName = args.shift().toLowerCase();
 
@@ -103,6 +102,22 @@ client.on('guildMemberAdd', async member => {
       .setTitle('Welcome')
       .setThumbnail(member.user.avatarURL())
       .setDescription(username + " just joined the server")
+      .setTimestamp();
+    setTimeout(() => {
+      client.channels.cache.get(config.welcomeChannel).send(Embed);
+    }, 1000);
+  }
+});
+
+client.on('guildMemberRemove', async member => {
+  if (config.Welcomer) {
+    let username = member.user.username + "#" + member.user.discriminator;
+    let Discord = require('discord.js');
+    const Embed = new Discord.MessageEmbed()
+      .setColor('#ff0000')
+      .setTitle('Goodbye')
+      .setThumbnail(member.user.avatarURL())
+      .setDescription(username + " just left the server")
       .setTimestamp();
     setTimeout(() => {
       client.channels.cache.get(config.welcomeChannel).send(Embed);

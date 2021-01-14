@@ -11,6 +11,8 @@ module.exports = {
     }
     if (role === undefined) {
       msg.guild.roles.create({ data: { name: 'muted'} })
+      msg.channel.send("role was not found")
+      return;
     }
     setTimeout(() => {
       msg.guild.channels.cache.forEach(c => c.updateOverwrite(role, { SEND_MESSAGES: false }));

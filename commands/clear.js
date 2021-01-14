@@ -7,7 +7,7 @@ module.exports = {
         msg.channel.send("please write how many messages to delete like !clear amount");
         return;
       }
-      if (args[1]>100){
+      if (args[1]>=100){
         msg.channel.send("i can't delete more then 100 messages")
         return;
       }
