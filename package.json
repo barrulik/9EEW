@@ -10,13 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.3",
-    "discord-player": "^3.0.3",
     "discord.js": "^12.5.1",
     "express": "^4.17.1",
     "ffmpeg-static": "^4.2.7",
     "mongodb": "^3.6.3",
     "path": "^0.12.7",
-    "sqlite3": "^5.0.0",
     "util": "^0.12.3",
     "ytdl-core": "^4.4.3"
   }

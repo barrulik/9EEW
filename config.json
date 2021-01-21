@@ -1,11 +1,11 @@
 {
-	"PREFIX": "!",
+	"PREFIX": "?",
 	"TOKEN":  "Nzg1ODExNTMxNjY4NzgzMTI0.X89SBA.ON4fojtBHLeCCmgraqucSL2v_GQ",
   "music": true,
   "moderation": true,
   "AntirRaid": true,
   "EmojisForPoorUsers": true,
-  "Welcomer": true,
+  "Welcomer": false,
   "welcomeChannel": "796353448027095051",
   "new_account_days": 10,
   "memer": false

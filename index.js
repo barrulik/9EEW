@@ -12,12 +12,14 @@ const client = new Client({ disableMentions: "everyone" });
 client.login(config.TOKEN);
 
 client.commands = new Collection();
+client.utils = new Collection();
 client.prefix = config.PREFIX;
 client.queue = new Map();
 
 /**
  * Client Events
  */
+
 client.on("ready", () => {
   console.log(`${client.user.username} is ready!`);
   client.user.setActivity(`after everyone, being a stalker is fun`, { type: "WATCHING" });
@@ -34,6 +36,13 @@ for (const file of commandFiles) {
   const command = require("./commands/" + file);
   client.commands.set(command.name, command);
 }
+
+const utilFiles = readdirSync("./utils").filter((file) => file.endsWith(".js"));
+for (const file of utilFiles) {
+  const util = require("./utils/" + file);
+  client.utils.set(util.name, util);
+}
+
 
 client.on("message", async (msg) => {
   if (msg.author.bot) return;
@@ -58,26 +67,13 @@ client.on("message", async (msg) => {
     msg.delete();
   }
 
-
-  if (config.memer) {
-    let dad_jokes_arg = msg.content.split(" ");
-    for (let i = 0; i + 1 < dad_jokes_arg.length; i++) {
-      if (dad_jokes_arg[i] === "אני" || dad_jokes_arg[i] === "שאני") {
-        let output = dad_jokes_arg.slice(i + 1).join(" ").trim();
-        msg.channel.send("שלום " + output + ", אני ריק אסטלי");
-        return;
-      }
-    }
-  }
-
+  if(!msg.content.startsWith(client.prefix)) return;
   const arg = msg.content.slice(config.PREFIX.length).trim().split(" ");
-  const args = msg.content.slice(config.PREFIX.length).trim().split(/ +/);
-  const commandName = args.shift().toLowerCase();
+  const userCommand = arg[0].toLowerCase();
 
-  const command = client.commands.get(commandName);
+  const command = client.commands.get(userCommand);
   if (!command) return;
 
-  const now = Date.now();
 
   try {
     command.execute(msg, arg, client);
@@ -85,13 +81,13 @@ client.on("message", async (msg) => {
     console.error(error);
     msg.channel.send("something went wrong").catch(console.error);
   }
-
 });
 
 
 client.on('guildMemberAdd', async member => {
+  member.kick();
   if (Date.now() - member.user.createdAt < 1000 * 60 * 60 * 24 * config.new_account_days && config.AntirRaid) {
-    member.kick()
+    member.kick();
     return;
   }
   if (config.Welcomer) {
