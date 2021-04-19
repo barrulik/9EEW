@@ -1,26 +1,18 @@
 ## 9EEW Configuration :
 ```
-This bot was made using a fork of the original MEE6,
-Invite to server : 
+**This bot was made using purely using ❤ and Javscript !
+**Invite to server : https://discord.com/oauth2/authorize?client_id=833657893995020319&permissions=8&scope=bot
 ```
 
 # Free and Open-Source !
 
-|Awesome Features|Description|
+|Awesome Features|Descriptions|
 |-------|-----------|
-|Commands|Add awesome custom commands to your server!|
-|Levels|Let your users gain XP and levels by participating in the chat!|
-|Moderator|Empower your moderators with cool commands!|
-|Search Anything|Search the Internet for whatever you want!|
-|Welcome|Display a welcome message for members that have joined the server!|
-|Timers|Send custom messages at a predefined interval!|
-|Record|Record your voice conversations into a nice mp3 file!|
-|Music|Listen to music with your friends!|
-|Twitch|Get notified when your favorite streamers go live!|
-|YouTube|Get notified when your favorite youtubers post a video!|
-|Reddit|Get your favorite subreddits posts directly on Discord!|
-|Help|Enables the !help command.|
-> Asnd so much more !
+|**Levels**|Let your users gain XP and levels by participating in the chat!|
+|**Welcome**|Display a warm welcome message for members that have joined the server!|
+|**Music**|Listen to the music from youtube and 900+ libraries with your friends!|
+|**Memes**|Get your favorite memes and generate random ones directly on Discord!|
+> And so much more !
 ## Support 9EEW now !
 
 <p align="center">
