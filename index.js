@@ -9,8 +9,6 @@ const config = require("./config.json");
 
 const client = new Client({ disableMentions: "everyone" });
 
-client.login(config.TOKEN);
-
 client.commands = new Collection();
 client.utils = new Collection();
 client.prefix = config.PREFIX;
@@ -120,3 +118,30 @@ client.on('guildMemberRemove', async member => {
     }, 1000);
   }
 });
+
+const Discord = require('discord.js');
+const api = require("imageapi.js");
+//please install imageapi.js !
+//memes
+
+client.on('ready', () => {
+  console.log(`Logged in as ${client.user.tag}!`);
+});
+
+client.on('message', async msg => {
+  if (msg.content === 'f.meme') {
+    let subreddits = [
+      "memes"
+    ];
+    let subreddit = subreddits[Math.floor(Math.random()*(subreddits.length))];
+    let img = await api(subreddit)
+    const Embed = new Discord.MessageEmbed()
+    .setTitle(`A meme from r/arabfunny`)
+    .setURL(`https://www.reddit.com/r/arabfunny`)
+    .setColor('RANDOM')
+    .setImage(img)
+    msg.channel.send(Embed)
+  }
+});
+
+client.login(config.TOKEN);
