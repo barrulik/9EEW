@@ -2,16 +2,16 @@ module.exports = {
   name: "kick",
   execute(msg) {
     if (!msg.member.hasPermission('KICK_MEMBERS')) {
-      msg.channel.send('```you have no permissions to kick members```');
+      msg.channel.send('you have no permissions to kick members');
       return;
     }
     let mentionMember = msg.mentions.members.first();
     if (!mentionMember) {
-      msg.channel.send('```please mention the user you want to kick```');
+      msg.channel.send('please mention the user you want to kick');
       return;
     }
     if (!mentionMember.kickable || mentionMember.id === '332115664179298305') {
-      msg.channel.send('```you are not allowed to kick this user```');
+      msg.channel.send('you are not allowed to kick this user');
       return
     }
 

@@ -2,7 +2,7 @@
 ```
 **This bot was made using purely using ❤ and Javscript !**
 Invite to server : https://discord.com/oauth2/authorize?client_id=833657893995020319&permissions=8&scope=bot
-small sidenote, the bot is not hosted currently, we need some funding to start hosting it
+small sidenote, the bot is not hosted currently, we need some funding to start hosting it. its on free host rn
 ```
 
 # Free and Open-Source !
@@ -16,9 +16,4 @@ small sidenote, the bot is not hosted currently, we need some funding to start h
 > And so much more !
 ## Support 9EEW now !
 
-<p align="center">
-<img src="https://cdn.discordapp.com/attachments/826578633228812331/833557089388331038/image.png">
-</p>
-<p align="center">
-Hi, I'm <b>9EEM</b>. Invite MEE now !
-</p>
+

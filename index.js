@@ -20,7 +20,7 @@ client.queue = new Map();
 
 client.on("ready", () => {
   console.log(`${client.user.username} is ready!`);
-  client.user.setActivity(`after everyone, being a stalker is fun`, { type: "WATCHING" });
+  client.user.setActivity(`Servers`, { type: "WATCHING" });
 });
 client.on("warn", (info) => console.log(info));
 client.on("error", console.error);
@@ -77,7 +77,7 @@ client.on("message", async (msg) => {
     command.execute(msg, arg, client);
   } catch (error) {
     console.error(error);
-    msg.channel.send("something went wrong").catch(console.error);
+    msg.channel.send("404 | something went wrong").catch(console.error);
   }
 });
 
@@ -128,51 +128,4 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', async msg => {
-  if (msg.content === 'f.meme') {
-    let subreddits = [
-      "memes"
-    ];
-    let subreddit = subreddits[Math.floor(Math.random()*(subreddits.length))];
-    let img = await api(subreddit)
-    const Embed = new Discord.MessageEmbed()
-    .setTitle(`A meme from r/arabfunny`)
-    .setURL(`https://www.reddit.com/r/arabfunny`)
-    .setColor('RANDOM')
-    .setImage(img)
-    msg.channel.send(Embed)
-  }
-});
-
-const { TOKEN, CHANNEL, SERVER, STATUS, LIVE } = require("./config.json");
-const ytdl = require('ytdl-core');
-var broadcast = null;
-var interval = null;
-
-  let channel = client.channels.cache.get(CHANNEL) || await client.channels.fetch(CHANNEL)
-
-  broadcast = client.voice.createBroadcast();
-  // Play the radio
-  broadcast.play(await ytdl(LIVE));
-  // Make interval so radio will automatically recommect to YT every 30 minute because YT will change the raw url every 30m/1 Hour
-  if (!interval) interval = setInterval(broadcast.play, 1800000, ytdl(LIVE));
-
-  if(!channel) return;
-  const connection = await channel.join();
-  connection.play(broadcast)
-})
-
-setInterval(async function() {
-  if(!client.voice.connections.get(SERVER)) {
-    let channel = client.channels.cache.get(CHANNEL) || await client.channels.fetch(CHANNEL)
-    if(!channel) return;
-
-    const connection = await channel.join()
-    connection.play(broadcast)
-  }
-}, 20000)
-
-client.login(config.TOKEN);
-
-
-
+client.login(config.TOKEN)

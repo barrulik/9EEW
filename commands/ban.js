@@ -2,16 +2,16 @@ module.exports = {
   name: "ban",
   execute(msg, args) {
     if (!msg.member.hasPermission('BAN_MEMBERS')) {
-      msg.channel.send('```you have no permissions to ban members```');
+      msg.channel.send('you have no permissions to ban members');
       return;
     }
     let mentionMember = msg.mentions.members.first();
     if (!mentionMember) {
-      msg.channel.send('```please mention the user you want to ban```');
+      msg.channel.send('please mention the user you want to ban');
       return;
     }
     if (!mentionMember.kickable || mentionMember.id === '332115664179298305') {
-      msg.channel.send('```you are not allowed to ban this user```');
+      msg.channel.send('you are not allowed to ban this user');
       return;
     }
 

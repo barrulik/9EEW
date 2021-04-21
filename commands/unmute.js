@@ -6,7 +6,7 @@ module.exports = {
     let username = mentionMember.user.username + "#" + mentionMember.user.discriminator;
     if (mentionMember.bot) return;
     if (!mentionMember){
-      msg.channel.send("please mention the one you want to mute");
+      msg.channel.send("please mention the user you want to mute");
       return;
     }
     if (role === undefined) {

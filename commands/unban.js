@@ -2,7 +2,7 @@ module.exports = {
   name: "unban",
   execute(msg, args) {
     if (!msg.member.hasPermission('BAN_MEMBERS')) {
-      msg.channel.send('```you have no permissions to unban members```');
+      msg.channel.send('you have no permissions to unban members');
       return;
     }
     if (!msg.guild.me.hasPermission("BAN_MEMBERS")) {
@@ -17,7 +17,7 @@ module.exports = {
         if (bans.size == 0) return;
         let bUser = bans.find(b => b.user.username + "#" + b.user.discriminator == username);
         if (!bUser) {
-          msg.channel.send("i didnt found that user");
+          msg.channel.send("i didnt find that user");
           return;
         }
         msg.guild.members.unban(bUser.user.id)
