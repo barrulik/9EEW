@@ -2,7 +2,7 @@
 ```
 **This bot was made using purely using ❤ and Javscript !**
 Invite to server : https://discord.com/oauth2/authorize?client_id=833657893995020319&permissions=8&scope=bot
-small sidenote, the bot is not hosted currently, we need some funding to start hosting it. its on free host rn
+small sidenote, the bot is not hosted currently, we need some funding to start hosting it. its on a free VPS rn
 ```
 
 # Free and Open-Source !
