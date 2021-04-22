@@ -1,25 +1,28 @@
 {
-  "name": "9EEW",
+  "name": "9eew",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "fix": "prettier --write .",
+    "prepare": "shx rm README.md && shx cp docs/README.md README.md",
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "author": "9EEW",
   "license": "MIT",
   "dependencies": {
-    "@discordjs/opus": "^0.3.3",
-    "discord-ytdl-core": "^4.1.3",
     "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "ffmpeg-static": "^4.2.7",
     "figlet": "^1.5.0",
     "imageapi.js": "^1.6.1",
-    "lyrics-finder": "^21.4.0",
-    "node.js": "0.0.1-security",
-    "sqlite3": "^5.0.2",
-    "string-progressbar": "^1.0.1",
-    "youtube-sr": "^1.0.4",
-    "ytdl-core": "^4.0.0"
+    "mongoose": "^5.12.5",
+    "prettier": "^2.2.1",
+    "shx": "^0.3.3",
+    "slash-create": "^3.1.0",
+    "string-progressbar": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
   }
 }
