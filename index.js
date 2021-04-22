@@ -119,13 +119,4 @@ client.on('guildMemberRemove', async member => {
   }
 });
 
-const Discord = require('discord.js');
-const api = require("imageapi.js");
-//please install imageapi.js !
-//memes
-
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
-});
-
 client.login(config.TOKEN)
