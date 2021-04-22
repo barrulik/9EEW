@@ -1,12 +1,12 @@
 {
-	"PREFIX": "9?",
-	"TOKEN":  "ODMzNjU3ODkzOTk1MDIwMzE5.YH1iag.zyE0TZSvzqd8duGa-wmRA3zMlZ8",
+  "PREFIX": "9?",
+  "TOKEN":  "00000000-000000000000-00000000000",
   "music": true,
   "moderation": true,
   "AntirRaid": true,
   "EmojisForPoorUsers": true,
   "Welcomer": false,
-  "welcomeChannel": "796353448027095051",
+  "welcomeChannel": "000000000",
   "new_account_days": 10,
   "memer": false
 }
