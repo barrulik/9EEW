@@ -15,5 +15,5 @@ small sidenote, the bot is not hosted currently, we need some funding to start h
 |**Memes**|Get your favorite memes and generate random ones directly on Discord!|
 > And so much more !
 ## Support 9EEW now !
-
+https://discord.gg/XCB4MTfppc
 
