@@ -1,3 +1,5 @@
+# the project is abondand
+
 ## 9EEW Configuration :
 ```
 **This bot was made using purely using ❤ and Javscript !**
